@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MediClean | Request</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/user_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Slabo+27px&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/registration.css">
+	<script type="text/javascript">
+
+		window.history.forward();
+		function noBack()
+		{
+			window.history.forward();
+		}
+
+		function mail()
+		{
+			var r = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			var mail=document.getElementById("email").value;
+			if(r.test(mail))
+			{
+				document.getElementById("errorEmail").innerHTML=" ";
+			}
+			else
+			{
+				document.getElementById("errorEmail").innerHTML="<font color='red'>Invalid Email ID</font>"
+			}
+		}
+		
+		function password()
+		{
+		var pass=document.getElementById("pass").value;
+	    var p =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}/;
+	    if(p.test(pass))
+	    {
+	    	document.getElementById("errorPass").innerHTML=" ";
+	    }
+	    else
+	    {    	
+	    	document.getElementById("errorPass").innerHTML="<font color='red'>Password <br/><ul><li>must contains one digit from 0-9</li><li> must contains one lowercase characters</li><li>must contains one uppercase characters</li><li>must contains one special symbols in the list @#$%</li><li>length at least 6 characters and maximum of 20</li></ul></font>";
+   			}
+		}
+
+		function match_pass()
+		{
+		var p1=document.getElementById("pass").value;
+		var p2=document.getElementById("conf").value;
+		if(p2.length==0)
+		{
+				document.getElementById("errorMatch").innerHTML="<font color='red'>Please re-enter the password</font>";
+		}
+		}
+		 function divide() { 
+            var txt; 
+            txt = document.getElementById('a').value; 
+            var text = txt.split("."); 
+            var str = text.join('.</br>'); 
+            document.write(str); 
+        } 
+
+		
+	</script>
+</head>
+
+<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
+	<!-- START NAVBAR -->
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <!-- Brand -->
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="navbar-brand p-2" href="index.html"><img src="img/logo.png" width="50px"><span class="ml-2">MediClean</span></a>
+    </li>
+  </ul>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       <ul class="navbar-nav ml-auto float-left">
+          <li class="nav-item mr-2 active"><a class = "nav-link" href="index.html">Home</a></li>
+          <li class="nav-item mr-2"><a class = "nav-link" href="details.html">Waste Category Details</a></li>
+          <li class="nav-item mr-2"><a class = "nav-link" href="index.html#category-container-here">Categories</a></li>
+          <li class="nav-item mr-2"><a class = "nav-link" href="https://www.google.com/search?q=covid-19+related+news+and+awareness&oq=covid-19+related+news+and+awareness&aqs=chrome..69i57.10559j0j7&sourceid=chrome&ie=UTF-8" target="_blank">News and Awareness</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="text-right  mb-2"><button type="button" class="btn btn-danger mr-3 pl-3 pr-3" onclick="window.open('registration.html')"><span class="fa fa-sign-in-alt pr-2" aria-hidden="true"></span>Request for Disposal</button></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+      
+  </div>
+</nav>
+<!-- END NAVBAR -->
+<div class="reg_page">
+	<h3>Enter your details here</h3>
+		<form id="frm" method="post" action="registration.php" autocomplete="off">
+			
+	        <table class="table p-5">
+	            <tr>
+	            	<td colspan="2">User Name:</td>
+	                <td colspan="2"><input type="text" id="uname" name="uname" required placeholder="John Doe" class="des"><br></td>
+	           </tr>
+
+	            <tr><td colspan="2">Enter email id:</td>
+	              <td colspan="2"><input type="text" id="email" name="email" required placeholder="xyz@example.com" class="des" onblur="mail()">
+	                <span id="errorEmail"></span><br></td> 
+	            </tr>
+
+	            
+
+	            <tr><td colspan="2">Address line 1:</td>
+	            <td colspan="2"><input type="text" id="add" name="addressline1" required placeholder="k.b road" class="des"></td>
+	        	</tr>
+
+		        <tr>
+		        <td colspan="2">Address line 2:</td><td colspan="2"><input type="text" id="addressline2" name="addressline2" required placeholder="block -6 " class="des" onblur="mail()">
+		        </td>
+		        </tr>
+		        <tr>
+		        <td colspan="2">City:</td><td><input type="text" id="city" name="city" required placeholder="kolkata" class="des" onblur="mail()">
+		        </td>
+		        </tr>
+		        <tr >
+		        <td colspan="2">Pincode:</td>
+		        <td><input type="text" id="add" name="pincode" required placeholder="700001" class="des"></td>
+		    	</tr>
+		            
+		        <tr><td colspan="2">Phone Number</td>
+		        <td><input type="text" id="ph" name="ph" required placeholder="+91xxxxxxxxxx" class="des"></td>
+		        </tr>
+		      
+		        <tr>
+		        <td colspan="2">Place :</td>
+				<td><select name="place">
+				<option  value="Personal">Personal</option>
+				<option  value="Doctors_clinic">Doctors clinic</option>
+				<option  value="Hospital">Hospital</option>
+				<option  value="Lab">Lab</option>
+				<option  value="Nursing_home">Nursing Home</option>
+
+				</select>
+				</td>
+				</tr>
+
+				<tr class="row_margin"><td colspan="2">Waste Category</td>
+				<td>
+			    <input type="checkbox" id="covid-19" name="waste_category[]" value="covid-19">
+			  	<label for="Personal"> Covid-19</label><br>
+			  	<input type="checkbox" id="other" name="waste_category[]" value="Other_medical_waste">
+			  	<label for="other"> Other medical waste</label><br>
+			    </td>
+				</tr>
+				<tr><td colspan="2">Enter your quantity</td>
+					<td><input type="textarea" name="textarea"required placeholder="Eg:N95 masks x 4" style="height: 100px">  
+			     </td></tr>
+
+				<tr><td></td><td colspan="3"><input  style="align:center"type="submit" value="Request" class="btn"></td></tr>
+			   
+			                
+			</table>
+		</form>
+</div>
+<div class="footer">
+        <div class="footer-endnote">
+          <span class="ml-5">&copy; All rights reserved</span>
+          <div class="footer-content-social">
+            <a href="#"><span class="fab fa-facebook"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+          </div>
+        </div>
+</div>
+
+</body>
+
+</html>

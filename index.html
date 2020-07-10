@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MediClean</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/user_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Slabo+27px&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- START NAVBAR -->
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <!-- Brand -->
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="navbar-brand p-2" href="index.html"><img src="img/logo.png" width="50px"><span class="ml-2">MediClean</span></a>
+    </li>
+  </ul>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       <ul class="navbar-nav ml-auto float-left">
+          <li class="nav-item mr-2 active"><a class = "nav-link" href="index.html">Home</a></li>
+          <li class="nav-item mr-2"><a class = "nav-link" href="details.html">Waste Category Details</a></li>
+          <li class="nav-item mr-2"><a class = "nav-link" href="#category-container-here">Categories</a></li>
+          <li class="nav-item mr-2"><a class = "nav-link" href="https://www.google.com/search?q=covid-19+related+news+and+awareness&oq=covid-19+related+news+and+awareness&aqs=chrome..69i57.10559j0j7&sourceid=chrome&ie=UTF-8" target="_blank">News and Awareness</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="text-right  mb-2"><button type="button" class="btn btn-danger mr-3 pl-3 pr-3" onclick="window.open('registration.html')"><span class="fa fa-sign-in-alt pr-2" aria-hidden="true"></span>Request for Disposal</button></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+      
+  </div>
+</nav>
+<!-- END NAVBAR -->
+
+<!-- START HOME -->
+  <div class="home-container">
+    <div class="home-content">
+      <h1>Dispose your medical wastes properly</h1>
+      <p>Wonder what the implications of improper medical waste disposal could have on your business? Proper medical waste disposal is not only important for the environment—but it’s also the law.Medical waste can be harmful and aid in the spread of infectious diseases. In order to protect patients and employees, medical waste needs to be properly disposed. Click on the button below to read the following transcript for a guide on proper medical waste disposal.</p>
+      <div class="explore-button">
+        <a href="waste.pdf" target="_blank">Guidelines</a>
+      </div>
+    </div>
+    
+  </div>
+<!-- END HOME -->
+  <div class="category-container mb-3" id="category-container-here">
+    <div class="category-content">
+      <div class="category-header">
+        <div class="category-header-title"><h2>Categories</h2></div>
+      </div>
+      <div class="container mt-5">
+        <div class="row text-center">
+
+          <div class="col mb-5 mr-5 card-one">
+            <h4 class="text-center mb-3">Personal Wastes</h4>
+            <ul class="text-left">
+              <li>Masks</li>
+              <li>Syringe</li>
+              <li>Glucose Test Strips</li>
+            </ul>
+            <div class="text-right float-left"><a href="manage.pdf" target="_blank">How to manage</a></div></a>
+            <div class="text-right float-right"><a href="details.html">More details<span class="fas fa-arrow-right ml-2"></span></a></div></a>
+            <div class="clearfix"></div>
+          </div>
+
+         <div class="col mb-5 mr-5 card-two">
+            <h4 class="text-center mb-3">Doctor's Clinic Wastes</h4>
+            <ul class="text-left">
+              <li>Gloves</li>
+              <li>Masks</li>
+              <li>Needles</li>
+            </ul>
+            <div class="text-right float-left"><a href="manage.pdf" target="_blank">How to manage</a></div></a>
+            <div class="text-right float-right"><a href="details.html">More details<span class="fas fa-arrow-right ml-2"></span></a></div></a>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="col mb-5 mr-5 card-three">
+            <h4 class="text-center mb-3">Laboratories Wastes</h4>
+            <ul class="text-left">
+              <li>Blood bag</li>
+              <li>Laboratory cultures</li>
+              <li>Dishes and Devices used for culture</li>
+            </ul>
+            <div class="text-right float-left"><a href="manage.pdf" target="_blank">How to manage</a></div></a>
+            <div class="text-right float-right"><a href="details.html">More details<span class="fas fa-arrow-right ml-2"></span></a></div></a>
+            <div class="clearfix"></div>
+          </div>
+
+        </div>
+        <!-- second line -->
+         <div class="row text-center">
+
+          <div class="col mb-5 mr-5 card-four">
+            <h4 class="text-center mb-3">Hospital Wastes</h4>
+            <ul class="text-left">
+              <li>Human Tissues</li>
+              <li>Cytotoxic Drugs</li>
+              <li>Scalpels</li>
+            </ul>
+            <div class="text-right float-left ml-5"><a href="manage.pdf"  target="_blank">How to manage</a></div></a>
+            <div class="text-right float-right mr-5"><a href="details.html">More details<span class="fas fa-arrow-right ml-2"></span></a></div></a>
+            <div class="clearfix"></div>
+          </div>
+
+         <div class="col mb-5 mr-5 card-one">
+            <h4 class="text-center mb-3">Nursing Home Wastes</h4>
+            <ul class="text-left">
+              <li>Tubing</li>
+              <li>Bottles</li>
+              <li>Items contaminated with blood</li>
+            </ul>
+            <div class="text-right float-left ml-5"><a href="manage.pdf" target="_blank">How to manage</a></div></a>
+            <div class="text-right float-right mr-5"><a href="details.html">More details<span class="fas fa-arrow-right ml-2"></span></a></div></a>
+            <div class="clearfix"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+   <div class="footer">
+        <div class="footer-endnote">
+          <span class="ml-5">&copy; All rights reserved</span>
+          <div class="footer-content-social">
+            <a href="#"><span class="fab fa-facebook"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+          </div>
+        </div>
+    </div>
+</html>
